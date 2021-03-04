@@ -1,0 +1,96 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px;
+  &__logo {
+    width: 300px;
+  }
+}
+.main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  &__name--label {
+    color: cyan;
+  }
+  &__name--input {
+    background-color: white;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    height: 30px;
+    font-size: 14px;
+    padding: 5px;
+    border: 5px rgb(1, 150, 150) solid;
+    border-radius: 10px;
+  }
+  &__gender--label {
+    color: cyan;
+  }
+  &__gender--select {
+    background-color: white;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    height: 30px;
+    width: 100px;
+    font-size: 14px;
+    border: 5px rgb(1, 150, 150) solid;
+    border-radius: 10px;
+  }
+}
+.card__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &--element {
+    margin-bottom: 30px;
+    text-align: center;
+    &-image {
+      border-radius: 50%;
+      margin-right: 30px;
+    }
+    &-name {
+      text-decoration: none;
+      font-size: 28px;
+      color: cyan;
+    }
+    &-description {
+      text-decoration: none;
+      color: cyan;
+    }
+  }
+}
+.card-detail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column-reverse;
+  color: aqua;
+  &__image {
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+  &__description {
+    text-align: center;
+    margin-bottom: 20px;
+    &-name {
+      color: cyan;
+    }
+  }
+}
+.link {
+  text-decoration: none;
+  background-color: aquamarine;
+  border: aquamarine;
+  padding: 5px 10px;
+  border-radius: 20px;
+  &__text {
+    background-color: aquamarine;
+  }
+}

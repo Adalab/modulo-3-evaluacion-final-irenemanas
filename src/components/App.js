@@ -1,4 +1,5 @@
 import "../style/App.scss";
+import Logo from "../images/Rick_MortyLogo.png";
 import React, { useEffect, useState } from "react";
 import { Route, Switch } from "react-router-dom";
 import Filters from "./Filters";
@@ -39,14 +40,10 @@ const App = () => {
   };
   return (
     <>
-      <header>
-        <img
-          className='logo'
-          src='https://help.redbubble.com/hc/article_attachments/360002309526/Rick_and_Morty_-_logo__English_.png'
-          alt='Rick and Morty Logo'
-        />
+      <header className='header'>
+        <img className='header__logo' src={Logo} alt='Rick and Morty Logo' />
       </header>
-      <main>
+      <main className='main'>
         <Switch>
           <Route exact path='/'>
             <Filters handleFilter={handleFilter} />

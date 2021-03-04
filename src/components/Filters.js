@@ -3,12 +3,12 @@ import FilterByGender from "./FilterByGender";
 
 const Filters = (props) => {
   return (
-    <section>
-      <form>
-        <FilterByName handleFilter={props.handleFilter} />
+    <>
+      <form className='form'>
+        <FilterByName handleFilter={props.handleFilter} filterByName={props.filterByName} />
         <FilterByGender handleFilter={props.handleFilter} />
       </form>
-    </section>
+    </>
   );
 };
 export default Filters;

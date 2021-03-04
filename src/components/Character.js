@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import "../style/App.scss";
 
 const Character = (props) => {
   const getGender = () => {
@@ -14,12 +15,13 @@ const Character = (props) => {
     <>
       <Link to={`/character/${props.character.id}`}>
         <img
+          className='card__list--element-image'
           src={props.character.image}
           alt={`Imagen de ${props.character.name}`}
           title={`Imagen de ${props.character.name}`}
         />
-        <h4>{props.character.name}</h4>
-        <p>
+        <h4 className='card__list--element-name'>{props.character.name}</h4>
+        <p className='card__list--element-description'>
           {props.character.species} / {getGender()}
         </p>
       </Link>

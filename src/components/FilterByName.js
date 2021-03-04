@@ -2,7 +2,6 @@ import { useState } from "react";
 
 const FilterByName = (props) => {
   const handleChange = (ev) => {
-    //props.handleFilter("name", ev.target.value);
     props.handleFilter({
       key: "name",
       value: ev.target.value,
@@ -10,8 +9,18 @@ const FilterByName = (props) => {
   };
   return (
     <>
-      <label htmlFor='name'>Nombre: </label>
-      <input type='text' name='name' id='name' onChange={handleChange} />
+      <label className='form__name--label' htmlFor='name'>
+        Filtra por nombre{" "}
+      </label>
+      <input
+        className='form__name--input'
+        type='text'
+        name='name'
+        id='name'
+        placeholder='Escribe un nombre'
+        value={props.FilterByName}
+        onChange={handleChange}
+      />
     </>
   );
 };
