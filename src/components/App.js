@@ -29,7 +29,14 @@ const App = () => {
     .filter((character) => {
       return gender === "all" ? true : character.gender === gender;
     });
-  console.log(filteredCharacters);
+
+  const renderDetail = (props) => {
+    const id = parseInt(props.match.params.id);
+    const selectedCharacter = characters.find((character) => {
+      return character.id === id;
+    });
+    return <CharacterDetail character={selectedCharacter} />;
+  };
   return (
     <>
       <header>
@@ -40,8 +47,13 @@ const App = () => {
         />
       </header>
       <main>
-        <Filters handleFilter={handleFilter} />
-        <CharacterList characters={filteredCharacters} />
+        <Switch>
+          <Route exact path='/'>
+            <Filters handleFilter={handleFilter} />
+            <CharacterList characters={filteredCharacters} />
+          </Route>
+          <Route path='/character/:id' render={renderDetail} />
+        </Switch>
       </main>
     </>
   );
