@@ -7,14 +7,19 @@ import CharacterDetail from "./CharacterDetail";
 import getDataFromApi from "../services/getDataFromApi";
 
 const App = () => {
+  const [characters, setCharacters] = useState([]);
+
+  useEffect(() => {
+    getDataFromApi().then((data) => setCharacters(data));
+  }, []);
   return (
     <>
       <header>
-        <img className='card__img' src='../images/Rick_MortyLogo.png' alt='foto de mujer' />
+        <img className='card__img' src='../images/Rick_MortyLogo.png' alt='Rick and Morty Logo' />
       </header>
       <main>
         <Filters />
-        <CharacterList />
+        <CharacterList characters={characters} />
       </main>
     </>
   );
