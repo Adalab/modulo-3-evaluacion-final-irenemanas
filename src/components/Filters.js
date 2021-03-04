@@ -5,7 +5,7 @@ const Filters = (props) => {
   return (
     <section>
       <form>
-        <FilterByName />
+        <FilterByName handleFilter={props.handleFilter} />
         <FilterByGender />
       </form>
     </section>
