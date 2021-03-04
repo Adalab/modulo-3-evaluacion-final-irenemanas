@@ -9,11 +9,12 @@ import getDataFromApi from "../services/getDataFromApi";
 const App = () => {
   const [characters, setCharacters] = useState([]);
   const [name, setName] = useState("");
-  const [gender, setGender] = useState("");
+  const [gender, setGender] = useState("all");
 
   useEffect(() => {
     getDataFromApi().then((data) => setCharacters(data));
   }, []);
+
   const handleFilter = (changedInput) => {
     if (changedInput.key === "name") {
       setName(changedInput.value);
@@ -21,9 +22,13 @@ const App = () => {
       setGender(changedInput.value);
     }
   };
-  const filteredCharacters = characters.filter((character) => {
-    return character.name.toUpperCase().includes(name.toLocaleUpperCase());
-  });
+  const filteredCharacters = characters
+    .filter((character) => {
+      return character.name.toUpperCase().includes(name.toLocaleUpperCase());
+    })
+    .filter((character) => {
+      return gender === "all" ? true : character.gender === gender;
+    });
   console.log(filteredCharacters);
   return (
     <>
