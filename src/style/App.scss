@@ -72,6 +72,7 @@
   justify-content: center;
   flex-direction: column-reverse;
   color: aqua;
+
   &__image {
     border-radius: 50%;
     margin-bottom: 20px;
@@ -79,6 +80,8 @@
   &__description {
     text-align: center;
     margin-bottom: 20px;
+    list-style: none;
+
     &-name {
       color: cyan;
     }
