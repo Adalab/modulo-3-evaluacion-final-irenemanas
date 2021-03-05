@@ -11,6 +11,21 @@ const CharacterDetail = (props) => {
       return "Sin género";
     }
   };
+  const getSpecies = () => {
+    if (props.character.species === "Human") {
+      return "Humana";
+    } else {
+      return "Alien";
+    }
+  };
+  const getStatus = () => {
+    if (props.character.status === "Alive") {
+      return "Vivo";
+    } else {
+      return "Muerto";
+    }
+  };
+
   if (props.character === undefined) {
     // No hay datos
     return <p>No hay datos</p>;
@@ -30,10 +45,10 @@ const CharacterDetail = (props) => {
         <ul className='card-detail__description'>
           <li className='card-detail__description--name'>Nombre: {props.character.name}</li>
           <li className='card-detail__description--gender'>Género: {getGender()}</li>
-          <li className='card-detail__description--species'>Especie: {props.character.species}</li>
+          <li className='card-detail__description--species'>Especie: {getSpecies()}</li>
           <li className='card-detail__description--origin'>Planeta de origen: {props.character.origin}</li>
           <li className='card-detail__description--planet'>Planeta de residencia: {props.character.location}</li>
-          <li className='card-detail__description--status'>Estatus: {props.character.status}</li>
+          <li className='card-detail__description--status'>Estatus: {getStatus()}</li>
         </ul>
       </section>
     );

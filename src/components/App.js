@@ -25,7 +25,7 @@ const App = () => {
   };
   const filteredCharacters = characters
     .filter((character) => {
-      return character.name.toUpperCase().includes(name.toLocaleUpperCase());
+      return character.name.toUpperCase().includes(name.toUpperCase());
     })
     .filter((character) => {
       return gender === "all" ? true : character.gender === gender;
@@ -46,7 +46,7 @@ const App = () => {
       <main className='main'>
         <Switch>
           <Route exact path='/'>
-            <Filters handleFilter={handleFilter} />
+            <Filters filterByName={name} handleFilter={handleFilter} />
             <CharacterList characters={filteredCharacters} />
           </Route>
           <Route path='/character/:id' render={renderDetail} />

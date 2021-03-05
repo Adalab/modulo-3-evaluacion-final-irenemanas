@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const FilterByName = (props) => {
   const handleChange = (ev) => {
@@ -18,7 +18,7 @@ const FilterByName = (props) => {
         name='name'
         id='name'
         placeholder='Escribe un nombre'
-        value={props.FilterByName}
+        value={props.filterByName}
         onChange={handleChange}
       />
     </>

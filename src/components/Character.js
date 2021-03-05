@@ -11,9 +11,17 @@ const Character = (props) => {
       return "Sin género";
     }
   };
+  const getSpecies = () => {
+    if (props.character.species === "Human") {
+      return "Humana";
+    } else {
+      return "Alien";
+    }
+  };
+
   return (
     <>
-      <Link to={`/character/${props.character.id}`}>
+      <Link to={`/character/${props.character.id}`} className='card__list--link'>
         <img
           className='card__list--element-image'
           src={props.character.image}
@@ -21,9 +29,10 @@ const Character = (props) => {
           title={`Imagen de ${props.character.name}`}
         />
         <h4 className='card__list--element-name'>{props.character.name}</h4>
-        <p className='card__list--element-description'>
-          {props.character.species} / {getGender()}
-        </p>
+        <ul>
+          <li className='card__list--element-description'>Especie: {getSpecies()}</li>
+          <li className='card__list--element-description'>Género: {getGender()}</li>
+        </ul>
       </Link>
     </>
   );

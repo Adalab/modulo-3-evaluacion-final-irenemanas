@@ -24,7 +24,7 @@
     background-color: white;
     margin-top: 5px;
     margin-bottom: 15px;
-    height: 30px;
+    height: 40px;
     font-size: 14px;
     padding: 5px;
     border: 5px rgb(1, 150, 150) solid;
@@ -37,7 +37,7 @@
     background-color: white;
     margin-top: 5px;
     margin-bottom: 20px;
-    height: 30px;
+    height: 40px;
     width: 100px;
     font-size: 14px;
     border: 5px rgb(1, 150, 150) solid;
@@ -48,20 +48,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  &--link {
+    text-decoration: none;
+  }
   &--element {
     margin-bottom: 30px;
     text-align: center;
+    list-style: none;
     &-image {
       border-radius: 50%;
-      margin-right: 30px;
     }
     &-name {
-      text-decoration: none;
       font-size: 28px;
       color: cyan;
     }
     &-description {
-      text-decoration: none;
       color: cyan;
     }
   }
@@ -89,11 +90,18 @@
 }
 .link {
   text-decoration: none;
-  background-color: aquamarine;
-  border: aquamarine;
+  background-color: cyan;
+  border: cyan;
   padding: 5px 10px;
   border-radius: 20px;
+  margin-bottom: 20px;
+  width: 100px;
+  text-align: center;
   &__text {
-    background-color: aquamarine;
+    background-color: cyan;
   }
+}
+@media all and (min-width: 768px) {
+}
+@media all and (min-width: 1024px) {
 }

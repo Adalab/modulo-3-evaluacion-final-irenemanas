@@ -15,10 +15,10 @@ const FilterByGender = (props) => {
           Todos
         </option>
         <option className='form__gender--select-2' value='Female'>
-          Mujer
+          Femenino
         </option>
         <option className='form__gender--select-3' value='Male'>
-          Hombre
+          Masculino
         </option>
       </select>
     </>
