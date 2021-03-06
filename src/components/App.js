@@ -43,7 +43,7 @@ const App = () => {
       <header className='header'>
         <img className='header__logo' src={Logo} alt='Rick and Morty Logo' />
       </header>
-      <main className='main'>
+      <main>
         <Switch>
           <Route exact path='/'>
             <Filters filterByName={name} handleFilter={handleFilter} />

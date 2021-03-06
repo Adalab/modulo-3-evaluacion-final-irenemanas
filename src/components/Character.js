@@ -29,9 +29,9 @@ const Character = (props) => {
           title={`Imagen de ${props.character.name}`}
         />
         <h4 className='card__list--element-name'>{props.character.name}</h4>
-        <ul>
-          <li className='card__list--element-description'>Especie: {getSpecies()}</li>
-          <li className='card__list--element-description'>Género: {getGender()}</li>
+        <ul className='card__list--element-description'>
+          <li>Especie: {getSpecies()}</li>
+          <li>Género: {getGender()}</li>
         </ul>
       </Link>
     </>

@@ -43,12 +43,12 @@ const CharacterDetail = (props) => {
           title={`Imagen de ${props.character.name}`}
         />
         <ul className='card-detail__description'>
-          <li className='card-detail__description--name'>Nombre: {props.character.name}</li>
-          <li className='card-detail__description--gender'>Género: {getGender()}</li>
-          <li className='card-detail__description--species'>Especie: {getSpecies()}</li>
-          <li className='card-detail__description--origin'>Planeta de origen: {props.character.origin}</li>
-          <li className='card-detail__description--planet'>Planeta de residencia: {props.character.location}</li>
-          <li className='card-detail__description--status'>Estatus: {getStatus()}</li>
+          <li className='card-detail__description--name'>{props.character.name}</li>
+          <li>Género: {getGender()}</li>
+          <li>Especie: {getSpecies()}</li>
+          <li>Planeta de origen: {props.character.origin}</li>
+          <li>Planeta de residencia: {props.character.location}</li>
+          <li>Estatus: {getStatus()}</li>
         </ul>
       </section>
     );

@@ -9,18 +9,20 @@ const FilterByName = (props) => {
   };
   return (
     <>
-      <label className='form__name--label' htmlFor='name'>
-        Filtra por nombre{" "}
-      </label>
-      <input
-        className='form__name--input'
-        type='text'
-        name='name'
-        id='name'
-        placeholder='Escribe un nombre'
-        value={props.filterByName}
-        onChange={handleChange}
-      />
+      <section className='form__name'>
+        <label className='form__name--label' htmlFor='name'>
+          Filtra por nombre{" "}
+        </label>
+        <input
+          className='form__name--input'
+          type='text'
+          name='name'
+          id='name'
+          placeholder='Escribe un nombre'
+          value={props.filterByName}
+          onChange={handleChange}
+        />
+      </section>
     </>
   );
 };
