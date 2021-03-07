@@ -12,13 +12,13 @@ const FilterByGender = (props) => {
           Filtra por género{" "}
         </label>
         <select className='form__gender--select' name='gender' id='gender' onChange={handleChange}>
-          <option className='form__gender--select-1' value='all'>
+          <option className='form__gender--option' value='all'>
             Todos
           </option>
-          <option className='form__gender--select-2' value='Female'>
+          <option className='form__gender--option' value='Female'>
             Femenino
           </option>
-          <option className='form__gender--select-3' value='Male'>
+          <option className='form__gender--option' value='Male'>
             Masculino
           </option>
         </select>

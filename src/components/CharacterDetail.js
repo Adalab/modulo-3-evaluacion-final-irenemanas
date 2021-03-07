@@ -32,7 +32,7 @@ const CharacterDetail = (props) => {
   } else {
     return (
       <section className='card-detail'>
-        <Link to='/' className='link'>
+        <Link to='/' className='return-btn'>
           <span className='link__text'>Volver</span>
         </Link>
 
@@ -48,7 +48,7 @@ const CharacterDetail = (props) => {
           <li>Especie: {getSpecies()}</li>
           <li>Planeta de origen: {props.character.origin}</li>
           <li>Planeta de residencia: {props.character.location}</li>
-          <li>Estatus: {getStatus()}</li>
+          <li>Estado: {getStatus()}</li>
         </ul>
       </section>
     );

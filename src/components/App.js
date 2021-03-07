@@ -39,20 +39,20 @@ const App = () => {
     return <CharacterDetail character={selectedCharacter} />;
   };
   return (
-    <>
+    <div className='page-column'>
       <header className='header'>
         <img className='header__logo' src={Logo} alt='Rick and Morty Logo' />
       </header>
-      <main>
+      <main className='main'>
         <Switch>
           <Route exact path='/'>
             <Filters filterByName={name} handleFilter={handleFilter} />
-            <CharacterList characters={filteredCharacters} />
+            <CharacterList characters={filteredCharacters} className='container' />
           </Route>
           <Route path='/character/:id' render={renderDetail} />
         </Switch>
       </main>
-    </>
+    </div>
   );
 };
 
