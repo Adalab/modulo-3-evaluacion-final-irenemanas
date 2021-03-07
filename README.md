@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+### Buscador de personajes RICK & MORTY :earth_americas:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Esta aplicación web es una web de búsqueda de personajes de la serie Rick & Morty, con la que el usuario puede buscar un personaje por su nombre y también filtrar los resultados por género. Al seleccionar el personaje, aparecerá una tarjeta con más información acerca del mismo.
 
-## Available Scripts
+Este proyecto ha sido llevado a cabo utilizando **React**, en el que he tratado de trabajar con una estructura organizada con node y npm. Npm instalará las dependencias en la carpeta node_modules, de donde podremos importar módulos de JS como react, react-dom y react-router a nuestro código.
 
-In the project directory, you can run:
+## Estructura
 
-### `npm start`
+El código se agrupa dentro de la carpeta src, excepto el único archivo HTML que usaremos, que estará en public/index.html. Los componentes de React irán en la carpeta src/components, cada uno en su fichero.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+|- node_modules
+| |- react
+| |- react-dom
+| |- react-router
+|
+|– public
+| |- favicon.ico
+| |– index.html
+|
+|– src
+| |– components
+| |– App.js
+| |– Character.js
+| |– CharacterDetail.js
+| |– CharacterList.js
+| |– FilterByGender.js
+| |– FilterByName.js
+| |– Filters.js
+| |– images
+| |– services
+| |- getDataFromApi.js
+| |– style
+| |– App.scss
+| |– index.js
+|
+|– .gitignore
+|
+|– package.json // project info + dependencies
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Componentes
 
-### `npm test`
+- **App.js** es desde el que se llama al resto de componentes de la aplicación.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Character.js** es el que se encarga de pintar la imagen, el nombre, la especie y el género de cada personaje con la información que recibimos de la llamada a la API.
 
-### `npm run build`
+- **CharacterDetail.js** es el que recoge una información más detallada sobre cada personaje y aparece en pantalla cuando hacemos click sobre uno de ellos.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **CharacterList.js** es el que recoge la lista de los personajes importando la información del componente Character.js.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Filters.js** es el encargado del formulario formado por los 2 filtros: **FilterByName.js** y **FilterByGender.js**. Este componente envía a los filtros toda la información y funcionalidades necesarias para que realicen su trabajo.
