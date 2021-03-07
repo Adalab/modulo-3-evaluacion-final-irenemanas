@@ -1,10 +1,10 @@
-### Buscador de personajes RICK & MORTY :earth_americas:
+## Buscador de personajes RICK & MORTY :earth_americas:
 
 Esta aplicación web es una web de búsqueda de personajes de la serie Rick & Morty, con la que el usuario puede buscar un personaje por su nombre y también filtrar los resultados por género. Al seleccionar el personaje, aparecerá una tarjeta con más información acerca del mismo.
 
 Este proyecto ha sido llevado a cabo utilizando **React**, en el que he tratado de trabajar con una estructura organizada con node y npm. Npm instalará las dependencias en la carpeta node_modules, de donde podremos importar módulos de JS como react, react-dom y react-router a nuestro código.
 
-## Componentes
+### Componentes
 
 El código se agrupa dentro de la carpeta src, excepto el único archivo HTML que usaremos, que estará en public/index.html. Los componentes de React irán en la carpeta src/components, cada uno en su fichero.
 
