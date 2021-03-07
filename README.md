@@ -4,40 +4,9 @@ Esta aplicación web es una web de búsqueda de personajes de la serie Rick & Mo
 
 Este proyecto ha sido llevado a cabo utilizando **React**, en el que he tratado de trabajar con una estructura organizada con node y npm. Npm instalará las dependencias en la carpeta node_modules, de donde podremos importar módulos de JS como react, react-dom y react-router a nuestro código.
 
-## Estructura
+## Componentes
 
 El código se agrupa dentro de la carpeta src, excepto el único archivo HTML que usaremos, que estará en public/index.html. Los componentes de React irán en la carpeta src/components, cada uno en su fichero.
-
-|- node_modules
-| |- react
-| |- react-dom
-| |- react-router
-|
-|– public
-| |- favicon.ico
-| |– index.html
-|
-|– src
-| |– components
-| |– App.js
-| |– Character.js
-| |– CharacterDetail.js
-| |– CharacterList.js
-| |– FilterByGender.js
-| |– FilterByName.js
-| |– Filters.js
-| |– images
-| |– services
-| |- getDataFromApi.js
-| |– style
-| |– App.scss
-| |– index.js
-|
-|– .gitignore
-|
-|– package.json // project info + dependencies
-
-## Componentes
 
 - **App.js** es desde el que se llama al resto de componentes de la aplicación.
 
